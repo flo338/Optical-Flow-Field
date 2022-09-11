@@ -60,7 +60,6 @@ class OpticalFlow:
                     if norm > 0.25:
                         optical_flow_vector *= 10
                     optical_flow_vector = np.int16(optical_flow_vector)
-                    #print(optical_flow_vector)
                     cv2.arrowedLine(frame, (j+half_step, k+half_step), (j+half_step+optical_flow_vector[0], k+half_step+optical_flow_vector[1]), (255,255,255), 1, tipLength=0.5)
 
             cv2.imshow("webcam stream", frame)
